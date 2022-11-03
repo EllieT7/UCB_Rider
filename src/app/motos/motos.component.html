@@ -1,0 +1,36 @@
+<!-- Courses -->
+<section id="courses">
+    <div class="container">
+         <div class="row">
+  
+              <div class="col-md-12 col-sm-12">
+                   <div class="section-title">
+                        <h2>Nuestras motocicletas <small>Las mejores motocicletas a tu disposicion y a la distancia de un solo click</small></h2>
+                   </div>
+  
+                   <div class="owl-carousel owl-theme owl-courses">
+                        <div  *ngFor="let art of articulos" class="col-lg-4 col-md-4 col-sm-4">
+                             <div class="item">
+                                  <div class="courses-thumb">
+                                       <div class="courses-top">
+                                            <div class="courses-image">
+                                                 <img src="{{art.img}}" class="img-responsive" alt="">
+                                            </div>
+                                            <div class="courses-date">
+                                                 <span><i class="fa fa-money"></i> {{art.precio}} Bs.</span>
+                                            </div>
+                                       </div>
+  
+                                       <div class="courses-detail">
+                                            <h3><a [routerLink]="['/Formulario', art.codigo]"  (click)="comprar(art)">{{art.nombre}}</a></h3>
+                                            <p>{{art.descripcion}}</p>
+                                       </div>
+                                  </div>
+                             </div>
+                        </div>
+  
+                   </div>
+               </div>
+         </div>
+    </div>
+  </section>
